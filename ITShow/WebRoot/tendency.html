@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EPM人才报告</title>
+<meta name="description" content="">
+<meta name="author" content="templatemo">
+<!-- 
+    Visual Admin Template
+    http://www.templatemo.com/preview/templatemo_455_visual_admin
+    -->
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700'
+	rel='stylesheet' type='text/css'>
+<link href="templatemo_455_visual_admin/css/font-awesome.min.css"
+	rel="stylesheet">
+<link href="templatemo_455_visual_admin/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="templatemo_455_visual_admin/css/templatemo-style.css"
+	rel="stylesheet">
+
+<script type="text/javascript"
+	src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="hightchart/js/highcharts.js"></script>
+<script>
+$(function() {
+	$('#container-line').highcharts(
+			{
+				title : {
+					text : '各IT岗位需求量变化趋势',
+					x : -20
+				//center
+				},
+				subtitle : {
+					text : '2015.10--至今',
+					x : -20
+				},
+				xAxis : {
+					categories : [ '2015.10', '2015.11', '2015.12',
+							'2016.01', '2016.02', '2016.03',
+							'2016.04','2016.05' ]
+				},
+				yAxis : {
+					title : {
+						text : '招聘数量（人）',
+						offset : -30,
+						rotation : 0,
+						align : 'high',
+						y : -10,
+					},
+					plotLines : [ {
+						value : 0,
+						width : 1,
+						color : '#808080'
+					} ]
+				},
+				tooltip : {
+					valueSuffix : '人'
+				},
+				legend : {
+					layout : 'horizontal',
+					align : 'center',
+					verticalAlign : 'bottom',
+					borderWidth : 0
+				},
+				series : [
+						{
+							name : 'Java',
+							data : [ 21695, 40996, 42058, 39567,
+									210606, 175447, 178757,17658 ]
+						},
+						{
+							name : 'PHP',
+							data : [ 8343, 16432, 16610, 15783,
+									103135, 83540, 83792,88456]
+						},
+						{
+							name : '.NET',
+							data : [ 5034, 14360, 15302, 14934,
+									54691, 47341, 48182,46335 ]
+						},
+						{
+							name : 'Html5',
+							data : [ 1227, 33328, 11202, 10317,
+									22247, 15320, 14728,16335 ]
+						},
+						{
+							name : 'WEB',
+							data : [ 16578, 332984, 113698, 102788,
+									206694, 126577, 132766,156543 ]
+						},
+						{
+							name : 'IOS',
+							data : [ 14388, 12494, 11543, 10393,
+									67498, 53998, 53487,51663 ]
+						},
+						{
+							name : 'Android',
+							data : [ 18549, 16503, 16260, 15138,
+									83899, 83899, 67905,66854 ]
+						},
+						{
+							name : '软件测试工程师',
+							data : [ 11808, 10904, 11476, 11184,
+									103135, 22151, 22474,25656 ]
+						}, {
+							name : '游戏测试工程师',
+							data : [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+						}, {
+							name : 'WEB测试',
+							data : [ 0, 0, 0, 0, 0, 0, 0 ]
+						}, {
+							name : '自动化测试',
+							data : [ 0, 0, 0, 0, 0, 0, 0 , 0]
+						}, {
+							name : 'APP测试',
+							data : [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+						} ]
+			});
+	});
+</script>
+</head>
+<body>
+	<!-- Left column -->
+	<div class="templatemo-flex-row">
+		<div class="templatemo-sidebar">
+			<header class="templatemo-site-header">
+				<div class="square"></div>
+				<h1>EPM人才报告</h1>
+			</header>
+			<div class="profile-photo-container">
+				<img src="templatemo_455_visual_admin/images/profile-photo.jpg"
+					alt="Profile Photo" class="img-responsive">
+				<div class="profile-photo-overlay"></div>
+			</div>
+			<!-- Search box -->
+			<!-- <form class="templatemo-search-form" role="search">
+				<div class="input-group">
+					<button type="submit" class="fa fa-search"></button>
+					<input type="text" class="form-control" placeholder="Search"
+						name="srch-term" id="srch-term">
+				</div>
+			</form> -->
+			<div class="mobile-menu-icon">
+				<i class="fa fa-bars"></i>
+			</div>
+			<nav class="templatemo-left-nav">
+				<ul>
+					<li><a href="index.html"><i class="fa fa-home fa-fw"></i>摘要</a></li>
+					<li><a href="tendency.html" class="active"><i
+							class="fa fa-bar-chart fa-fw"></i>趋势</a></li>
+					<li><a href="salary.html"><i class="fa fa-database fa-fw"></i>薪酬</a></li>
+					<li><a href="city.html"><i class="fa fa-map-marker fa-fw"></i>城市</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Main content -->
+		<div class="templatemo-content col-1 light-gray-bg">
+			<div class="templatemo-top-nav-container">
+				<div class="row">
+					<nav class="templatemo-top-nav col-lg-12 col-md-12">
+						<ul class="text-uppercase">
+							<li><a href="summary.html" class="active">报告总结</a></li>
+							<li><a href="map.html">招聘地图</a></li>
+							<li><a href="history.html">历史报告</a></li>
+							<li><a href="rankingList.html">排行榜</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="templatemo-content-container">
+			<div id="container-line" style="min-width:700px;height:400px"></div>
+			</div>
+			<footer class="text-right">
+				<div class="footer" style="margin: 0 auto; text-align: center;">
+					<ul>
+						<li style="list-style-type:none;"><span> <a
+								href="http://www.hope-pact.com/aboutus"> 关于我们 </a>
+						</span> | <span> <a href="http://www.hope-pact.com/zfjl"
+								rel="nofollow"> 政府交流 </a>
+						</span> | <span> <a href="http://www.hope-pact.com/gxhz"> 高校合作</a>
+						</span> | <span> <a href="http://www.hope-pact.com/lhrh"> 两化融合</a>
+						</span> | <span> <a href="http://www.hope-pact.com/xwzx"> 新闻资讯
+							</a>
+						</span> | <span> <a href="http://www.hope-pact.com/lxwm"> 联系我们
+							</a>
+						</span></li>
+						<li style="list-style-type:none;">地址：北京市朝阳区东三环中路5号财富金融中心33层</li>
+						<li style="list-style-type:none;">全国服务电话：010-65969901
+							官方网站：www.hope-pact.com</li>
+					</ul>
+				</div>
+
+				<div class="di" style="text-align: center;">2013-2016
+					惠普国际软件人才及产业基地(HP International Software Talents and Technology
+					Center) 版权所有</div>
+			</footer>
+		</div>
+	</div>
+
+	<!-- JS -->
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<!--  jQuery Migrate Plugin -->
+	<!-- <script src="https://www.google.com/jsapi"></script> -->
+	<!-- Google Chart -->
+	<script>
+		/* Google Chart 
+		-------------------------------------------------------------------*/
+		// Load the Visualization API and the piechart package.
+		google.load('visualization', '1.0', {
+			'packages' : [ 'corechart' ]
+		});
+
+		// Set a callback to run when the Google Visualization API is loaded.
+		google.setOnLoadCallback(drawChart);
+
+		// Callback that creates and populates a data table,
+		// instantiates the pie chart, passes in the data and
+		// draws it.
+		function drawChart() {
+
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Topping');
+			data.addColumn('number', 'Slices');
+			data.addRows([ [ 'Mushrooms', 3 ], [ 'Onions', 1 ],
+					[ 'Olives', 1 ], [ 'Zucchini', 1 ], [ 'Pepperoni', 2 ] ]);
+
+			// Set chart options
+			var options = {
+				'title' : 'How Much Pizza I Ate Last Night'
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var pieChart = new google.visualization.PieChart(document
+					.getElementById('pie_chart_div'));
+			pieChart.draw(data, options);
+
+			var barChart = new google.visualization.BarChart(document
+					.getElementById('bar_chart_div'));
+			barChart.draw(data, options);
+		}
+
+		$(document).ready(function() {
+			if ($.browser.mozilla) {
+				//refresh page on browser resize
+				// http://www.sitepoint.com/jquery-refresh-page-browser-resize/
+				$(window).bind('resize', function(e) {
+					if (window.RT)
+						clearTimeout(window.RT);
+					window.RT = setTimeout(function() {
+						this.location.reload(false); /* false to get page from cache */
+					}, 200);
+				});
+			} else {
+				$(window).resize(function() {
+					drawChart();
+				});
+			}
+		});
+	</script>	
+	<script type="text/javascript" src="js/templatemo-script.js"></script>
+	<!-- Templatemo Script -->
+
+</body>
+</html>

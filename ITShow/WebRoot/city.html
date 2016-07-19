@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EPM人才报告</title>
+<meta name="description" content="">
+<meta name="author" content="templatemo">
+<!-- 
+    Visual Admin Template
+    http://www.templatemo.com/preview/templatemo_455_visual_admin
+    -->
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700'
+	rel='stylesheet' type='text/css'>
+<link href="templatemo_455_visual_admin/css/font-awesome.min.css"
+	rel="stylesheet">
+<link href="templatemo_455_visual_admin/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="templatemo_455_visual_admin/css/templatemo-style.css"
+	rel="stylesheet">
+<script type="text/javascript"
+	src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="hightchart/js/highcharts.js"></script>
+<script>
+	$(function() {
+		var colors = Highcharts.getOptions().colors, categories = [ 'Java',
+				'PHP', '.Net', 'html5', 'web开发', 'Ios', 'Android', '软件测试工程师',
+				'游戏测试', 'web测试', '自动化测试', 'app测试' ], name = '地区', data = [
+				{
+					y : 178757,
+					color : colors[0],
+					drilldown : {
+						name : 'Java',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 50254, 25076, 9580, 12765, 1899, 13050, 2309,
+								1190, 5292, 4288, 1910, 5233 ],
+						color : colors[0]
+					}
+				},
+				{
+					y : 83792,
+					color : colors[1],
+					drilldown : {
+						name : 'PHP',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 22655, 11300, 5711, 7106, 750, 4845, 973, 752,
+								2505, 1856, 1143, 1466 ],
+						color : colors[1]
+					}
+				},
+				{
+					y : 48182,
+					color : colors[2],
+					drilldown : {
+						name : '.NET',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 8314, 8459, 2766, 3647, 543, 2860, 756, 675,
+								1609, 1458, 770, 954 ],
+						color : colors[2]
+					}
+				},
+				{
+					y : 14728,
+					color : colors[3],
+					drilldown : {
+						name : 'HTML5',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 4318, 2794, 907, 1416, 98, 1079, 90, 56, 454,
+								220, 154, 353 ],
+						color : colors[3]
+					}
+				},
+				{
+					y : 132766,
+					color : colors[4],
+					drilldown : {
+						name : 'WEB开发',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 42991, 21003, 6959, 12732, 1184, 13272, 770,
+								856, 4143, 2744, 920, 2832 ],
+						color : colors[4]
+					}
+				},
+				{
+					y : 53487,
+					color : colors[5],
+					drilldown : {
+						name : 'IOS',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 12660, 8470, 3730, 5048, 405, 4253, 303, 426,
+								1781, 1243, 468, 1434 ],
+						color : colors[5]
+					}
+				},
+				{
+					y : 67905,
+					color : colors[6],
+					drilldown : {
+						name : 'Android',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 15932, 10064, 4141, 6996, 548, 5986, 635, 554,
+								2038, 1618, 653, 2241 ],
+						color : colors[6]
+					}
+				},
+				{
+					y : 22474,
+					color : colors[7],
+					drilldown : {
+						name : '软件测试工程师',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 4538, 3682, 1423, 2255, 148, 1771, 181, 118,
+								798, 594, 163, 747 ],
+						color : colors[7]
+					}
+				},
+				{
+					y : 2690,
+					color : colors[8],
+					drilldown : {
+						name : '游戏测试',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 498, 439, 310, 206, 19, 168, 80, 25, 160, 29,
+								11, 53 ],
+						color : colors[8]
+					}
+				},
+				{
+					y : 1240,
+					color : colors[4],
+					drilldown : {
+						name : 'WEB测试',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 366, 222, 36, 181, 2, 74, 4, 4, 44, 17, 4, 46 ],
+						color : colors[4]
+					}
+				},
+				{
+					y : 6699,
+					color : colors[5],
+					drilldown : {
+						name : '自动化测试',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 1488, 1028, 202, 492, 68, 264, 24, 35, 159,
+								98, 34, 143 ],
+						color : colors[5]
+					}
+				},
+				{
+					y : 2507,
+					color : colors[7],
+					drilldown : {
+						name : 'APP测试',
+						categories : [ '北京', '上海', '广州', '深圳', '天津', '杭州',
+								'济南', '青岛', '成都', '武汉', '郑州', '南京' ],
+						data : [ 851, 419, 140, 228, 5, 269, 45, 3, 52, 26, 10,
+								33 ],
+						color : colors[7]
+					}
+				} ];
+
+		function setChart(name, categories, data, color) {
+			chart.xAxis[0].setCategories(categories, false);
+			chart.series[0].remove(false);
+			chart.addSeries({
+				name : name,
+				data : data,
+				color : color || 'white'
+			}, false);
+			chart.redraw();
+		}
+
+		var chart = $('#container-mix').highcharts(
+				{
+					chart : {
+						type : 'column'
+					},
+					title : {
+						text : '各IT岗位全国需求总量分布And各城市招聘详情'
+					},
+					subtitle : {
+						text : '点击柱状图图获取该IT岗位哥城市招聘详情'
+					},
+					xAxis : {
+						categories : categories
+					},
+
+					yAxis : {
+						title : {
+							text : '招聘数量（人）',
+							rotation : 0,
+							align : 'high',
+							y : -10,
+							offset : -30,
+						}
+					},
+					plotOptions : {
+						column : {
+							cursor : 'pointer',
+							point : {
+								events : {
+									click : function() {
+										var drilldown = this.drilldown;
+										if (drilldown) { // drill down
+											setChart(drilldown.name,
+													drilldown.categories,
+													drilldown.data,
+													drilldown.color);
+										} else { // restore
+											setChart(name, categories, data);
+										}
+									}
+								}
+							},
+							dataLabels : {
+								enabled : true,
+								color : colors[0],
+								style : {
+									fontWeight : 'bold'
+								},
+								formatter : function() {
+									return this.y;
+								}
+							}
+						}
+					},
+					tooltip : {
+						formatter : function() {
+							var point = this.point, s = this.x + ':<b>'
+									+ this.y + '人</b><br/>';
+							if (point.drilldown) {
+								s += '点击获取' + point.category + ' 在各城市的招聘详情';
+							} else {
+								s += '点击返回查看各IT岗位需求总量分布';
+							}
+							return s;
+						}
+					},
+					series : [ {
+						name : name,
+						data : data,
+						color : 'white'
+					} ],
+					exporting : {
+						enabled : false
+					}
+				}).highcharts(); // return chart
+	});
+</script>
+<script>
+	$(function() {
+		$('#container-pie')
+				.highcharts(
+						{
+							chart : {
+								type : 'pie',
+								options3d : {
+									enabled : true,
+									alpha : 45,
+									beta : 0
+								}
+							},
+							title : {
+								text : '北京各主要IT岗位需求量占比'
+							},
+							tooltip : {
+								pointFormat : '招聘数量：{point.y} {series.name}: {point.percentage:.1f}%</b>'
+							},
+							plotOptions : {
+								pie : {
+									allowPointSelect : true,
+									cursor : 'pointer',
+									depth : 35,
+									dataLabels : {
+										enabled : true,
+										format : '<b>{point.name}</b>: {point.percentage:.1f}%',
+										style : {
+											color : (Highcharts.theme && Highcharts.theme.contrastTextColor)
+													|| 'black'
+										}
+									},
+									showInLegend : true
+								}
+							},
+							series : [ {
+								type : 'pie',
+								name : '招聘比重',
+								data : [ [ 'java', 50254 ], [ 'php', 22655 ],
+										[ '.NET', 8314 ], [ 'html5', 4318 ],
+										[ 'web', 42991 ], [ 'ios', 12660 ],
+										[ 'android', 15932 ],
+										[ '软件测试工程师', 4538 ], [ '游戏测试', 498 ],
+										[ 'WEB测试', 366 ], [ '自动化测试', 1488 ],
+										[ 'app测试', 851 ] ],
+
+							} ]
+						});
+	});
+
+	$(function() {
+		$('#container-pie1')
+				.highcharts(
+						{
+							chart : {
+								type : 'pie',
+								options3d : {
+									enabled : true,
+									alpha : 45,
+									beta : 0
+								}
+							},
+							title : {
+								text : '上海各主要IT岗位需求量占比'
+							},
+							tooltip : {
+								pointFormat : '招聘数量：{point.y} {series.name}: {point.percentage:.1f}%</b>'
+							},
+							plotOptions : {
+								pie : {
+									allowPointSelect : true,
+									cursor : 'pointer',
+									depth : 35,
+									dataLabels : {
+										enabled : true,
+										format : '<b>{point.name}</b>: {point.percentage:.1f}%',
+										style : {
+											color : (Highcharts.theme && Highcharts.theme.contrastTextColor)
+													|| 'black'
+										}
+									},
+									showInLegend : true
+								}
+							},
+							series : [ {
+								type : 'pie',
+								name : '招聘比重',
+								data : [ [ 'java', 25075 ], [ 'php', 11299 ],
+										[ '.NET', 8458 ], [ 'html5', 2794 ],
+										[ 'web', 21003 ], [ 'ios', 8470 ],
+										[ 'android', 10064 ],
+										[ '软件测试工程师', 3682 ], [ '游戏测试', 439 ],
+										[ 'WEB测试', 222 ], [ '自动化测试', 1028 ],
+										[ 'app测试', 419 ]
+
+								],
+
+							} ]
+						});
+	});
+
+	$(function() {
+		$('#container-pie2')
+				.highcharts(
+						{
+							chart : {
+								type : 'pie',
+								options3d : {
+									enabled : true,
+									alpha : 45,
+									beta : 0
+								}
+							},
+							title : {
+								text : '济南各主要IT岗位需求量占比'
+							},
+							tooltip : {
+								pointFormat : '招聘数量：{point.y} {series.name}: {point.percentage:.1f}%</b>'
+							},
+							plotOptions : {
+								pie : {
+									allowPointSelect : true,
+									cursor : 'pointer',
+									depth : 35,
+									dataLabels : {
+										enabled : true,
+										format : '<b>{point.name}</b>: {point.percentage:.1f}%',
+										style : {
+											color : (Highcharts.theme && Highcharts.theme.contrastTextColor)
+													|| 'black'
+										}
+									},
+									showInLegend : true
+								}
+							},
+							series : [ {
+								type : 'pie',
+								name : '招聘比重',
+								data : [ [ 'java', 2309 ], [ 'php', 973 ],
+										[ '.NET', 756 ], [ 'html5', 90 ],
+										[ 'web', 770 ], [ 'ios', 303 ],
+										[ 'android', 635 ], [ '软件测试工程师', 181 ],
+										[ '游戏测试', 80 ], [ 'WEB测试', 4 ],
+										[ '自动化测试', 24 ], [ 'app测试', 45 ]
+
+								],
+
+							} ]
+						});
+	});
+
+	$(function() {
+		$('#container-pie3')
+				.highcharts(
+						{
+							chart : {
+								type : 'pie',
+								options3d : {
+									enabled : true,
+									alpha : 45,
+									beta : 0
+								}
+							},
+							title : {
+								text : '青岛各主要IT岗位需求量占比'
+							},
+							tooltip : {
+								pointFormat : '招聘数量：{point.y} {series.name}: {point.percentage:.1f}%</b>'
+							},
+							plotOptions : {
+								pie : {
+									allowPointSelect : true,
+									cursor : 'pointer',
+									depth : 35,
+									dataLabels : {
+										enabled : true,
+										format : '<b>{point.name}</b>: {point.percentage:.1f}%',
+										style : {
+											color : (Highcharts.theme && Highcharts.theme.contrastTextColor)
+													|| 'black'
+										}
+									},
+									showInLegend : true
+								}
+							},
+							series : [ {
+								type : 'pie',
+								name : '招聘比重',
+								data : [ [ 'java', 1190 ], [ 'php', 752 ],
+										[ '.NET', 675 ], [ 'html5', 56 ],
+										[ 'web', 856 ], [ 'ios', 426 ],
+										[ 'android', 554 ], [ '软件测试工程师', 118 ],
+										[ '游戏测试', 25 ], [ 'WEB测试', 4 ],
+										[ '自动化测试', 35 ], [ 'app测试', 3 ]
+
+								],
+
+							} ]
+						});
+	});
+</script>
+
+</head>
+<body>
+	<!-- Left column -->
+	<div class="templatemo-flex-row">
+		<div class="templatemo-sidebar">
+			<header class="templatemo-site-header">
+				<div class="square"></div>
+				<h1>EPM人才报告</h1>
+			</header>
+			<div class="profile-photo-container">
+				<img src="templatemo_455_visual_admin/images/profile-photo.jpg"
+					alt="Profile Photo" class="img-responsive">
+				<div class="profile-photo-overlay"></div>
+			</div>
+			<!-- Search box -->
+			<<!-- form class="templatemo-search-form" role="search">
+				<div class="input-group">
+					<button type="submit" class="fa fa-search"></button>
+					<input type="text" class="form-control" placeholder="Search"
+						name="srch-term" id="srch-term">
+				</div>
+			</form> -->
+			<div class="mobile-menu-icon">
+				<i class="fa fa-bars"></i>
+			</div>
+			<nav class="templatemo-left-nav">
+				<ul>
+					<li><a href="index.html"><i class="fa fa-home fa-fw"></i>摘要</a></li>
+					<li><a href="tendency.html"><i
+							class="fa fa-bar-chart fa-fw"></i>趋势</a></li>
+					<li><a href="salary.html"><i class="fa fa-database fa-fw"></i>薪酬</a></li>
+					<li><a href="city.html" class="active"><i
+							class="fa fa-map-marker fa-fw"></i>城市</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Main content -->
+		<div class="templatemo-content col-1 light-gray-bg">
+			<div class="templatemo-top-nav-container">
+				<div class="row">
+					<nav class="templatemo-top-nav col-lg-12 col-md-12">
+						<ul class="text-uppercase">
+							<li><a href="summary.html" class="active">报告总结</a></li>
+							<li><a href="map.html">招聘地图</a></li>
+							<li><a href="history.html">历史报告</a></li>
+							<li><a href="rankingList.html">排行榜</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="templatemo-content-container">
+				<div id="container-mix" style="min-width:400px;height:400px">4、</div>
+				<div id="container-pie" style="min-width:400px;height:400px">3、Java</div>
+				<div id="container-pie1" style="min-width:400px;height:400px">3、Java</div>
+				<div id="container-pie2" style="min-width:400px;height:400px">3、Java</div>
+				<div id="container-pie3" style="min-width:400px;height:400px">3、Java</div>
+			</div>
+
+
+
+
+
+			<footer class="text-right">
+				<div class="footer" style="margin: 0 auto; text-align: center;">
+					<ul>
+						<li style="list-style-type:none;"><span> <a
+								href="http://www.hope-pact.com/aboutus"> 关于我们 </a>
+						</span> | <span> <a href="http://www.hope-pact.com/zfjl"
+								rel="nofollow"> 政府交流 </a>
+						</span> | <span> <a href="http://www.hope-pact.com/gxhz"> 高校合作</a>
+						</span> | <span> <a href="http://www.hope-pact.com/lhrh"> 两化融合</a>
+						</span> | <span> <a href="http://www.hope-pact.com/xwzx"> 新闻资讯
+							</a>
+						</span> | <span> <a href="http://www.hope-pact.com/lxwm"> 联系我们
+							</a>
+						</span></li>
+						<li style="list-style-type:none;">地址：北京市朝阳区东三环中路5号财富金融中心33层</li>
+						<li style="list-style-type:none;">全国服务电话：010-65969901
+							官方网站：www.hope-pact.com</li>
+					</ul>
+				</div>
+
+				<div class="di" style="text-align: center;">2013-2016
+					惠普国际软件人才及产业基地(HP International Software Talents and Technology
+					Center) 版权所有</div>
+			</footer>
+		</div>
+	</div>
+	</div>
+
+	<!-- JS -->
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<!--  jQuery Migrate Plugin -->
+	<!-- <script src="https://www.google.com/jsapi"></script> -->
+	<!-- Google Chart -->
+	<script>
+		/* Google Chart 
+		-------------------------------------------------------------------*/
+		// Load the Visualization API and the piechart package.
+		google.load('visualization', '1.0', {
+			'packages' : [ 'corechart' ]
+		});
+
+		// Set a callback to run when the Google Visualization API is loaded.
+		google.setOnLoadCallback(drawChart);
+
+		// Callback that creates and populates a data table,
+		// instantiates the pie chart, passes in the data and
+		// draws it.
+		function drawChart() {
+
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Topping');
+			data.addColumn('number', 'Slices');
+			data.addRows([ [ 'Mushrooms', 3 ], [ 'Onions', 1 ],
+					[ 'Olives', 1 ], [ 'Zucchini', 1 ], [ 'Pepperoni', 2 ] ]);
+
+			// Set chart options
+			var options = {
+				'title' : 'How Much Pizza I Ate Last Night'
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var pieChart = new google.visualization.PieChart(document
+					.getElementById('pie_chart_div'));
+			pieChart.draw(data, options);
+
+			var barChart = new google.visualization.BarChart(document
+					.getElementById('bar_chart_div'));
+			barChart.draw(data, options);
+		}
+
+		$(document).ready(function() {
+			if ($.browser.mozilla) {
+				//refresh page on browser resize
+				// http://www.sitepoint.com/jquery-refresh-page-browser-resize/
+				$(window).bind('resize', function(e) {
+					if (window.RT)
+						clearTimeout(window.RT);
+					window.RT = setTimeout(function() {
+						this.location.reload(false); /* false to get page from cache */
+					}, 200);
+				});
+			} else {
+				$(window).resize(function() {
+					drawChart();
+				});
+			}
+		});
+	</script>
+	<script type="text/javascript" src="js/templatemo-script.js"></script>
+	<!-- Templatemo Script -->
+
+</body>
+</html>
